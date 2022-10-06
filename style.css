@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #000000;
+}
+
+header {
+    z-index: 2;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 42px;
+    background-color: #070000;
+    border-bottom: 3px solid #690012;
+    margin-bottom:10px;
+
+}
+
+div.bg-fundo {
+    background-image: url(imgs/background-omen.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #000000cc;
+    background-blend-mode: color;
+    background-attachment: fixed;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+
+}
+
+div#bg-omen {
+    background-image: url(imgs/background-omen2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #000000cc;
+    background-blend-mode: color;
+    background-attachment: fixed;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+
+}
+
+.content-wrapper {
+    position: relative;
+    z-index: 1;
+}
+
+.containerproje {
+    position: relative;
+    max-width: 100vw;
+    max-height: 100vh;
+
+}
+
+.containerproje .slide-container .slide {
+    max-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 9%;
+    padding-bottom: 70px;
+    margin-top: 50px;
+    z-index: 1;
+
+}
+
+.containerproje .slide-container .slide .contentproje {
+    flex:1 1 350px;
+    animation: slideContent .4s linear .4s backwards;
+}
+
+@keyframes slideContent {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+}
+
+.containerproje .slide-container .slide .contentproje h1 {
+    font-size: 35px;
+    color: #f3313ad8;
+    font-family: 'Noto sans', sans-serif;
+}
+
+.containerproje .slide-container .slide .contentproje p {
+    font-size: 16px;
+    color: #ffff;
+    font-family: 'Noto sans', sans-serif;
+    width: 60%;
+    height: 30%;
+    text-align: left;
+}
+
+p#pag2 {
+    font-size: 16px;
+    color: #ffff;
+    font-family: 'Noto sans', sans-serif;
+    width: 80%;
+    height: 40%;
+    text-align: left;
+}
+
+.containerproje .slide-container .slide .contentproje .bntproje {
+    margin-top: 10px;
+    font-family: 'Noto sans', sans-serif;
+    display: inline-block;
+    background: #eb2626dc;
+    color: #ffffff;
+    font-size: 17px;
+    padding: 9px 40px;
+    border-radius: 5px;
+    border: 3px solid #690012;
+}
+
+#bntproje:hover {
+    background: #000000;
+    border: 2px soid #080808;
+    color: rgb(5, 5, 5);
+}
+
+#omen {
+    background-position: left center;
+    margin-top: 10vh;
+    width: 30%;
+    height: 20%;
+    animation: omenContent .4s linear .4s backwards;
+}
+
+@keyframes omenContent {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+}
+
+#prev,
+#next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    font-size: 25px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bolder;
+    border-radius: 50px;
+    background-color: #b3001e;
+    background-image: url(imgs/icon-valorant.ico);
+    background-position: center center;
+    background-repeat: no-repeat;
+
+}
+
+#prev:hover,
+#next:hover {
+    background: #f14949;
+    background-image: url(imgs/icon-valorant.ico);
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#prev {
+    left: 20px;
+}
+
+#next {
+    right: 20px;
+}
+
+@media(max-width: 500px) {
+    header {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 30px;
+        background-color: #070000;
+        border-bottom: 3px solid #690012;
+        z-index: 1;
+
+    }
+
+    body#valorant-pag {
+        background-image: url(imgs/background-omen.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-color: #000000cc;
+        background-blend-mode: color;
+        background-position: right bottom;
+        background-attachment: fixed;
+
+    }
+
+    body#omen-pag {
+        background-image: url(imgs/background-omen2.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-color: #000000cc;
+        background-blend-mode: color;
+        background-position: center bottom;
+        background-attachment: fixed;
+    }
+
+    .containerproje #prev {
+        top: 80%;
+        left: 0;
+    }
+
+    .containerproje #next {
+        top: 80%;
+        right: 0;
+    }
+
+    .containerproje .slide-container .slide .contentproje p {
+        font-size: 16px;
+        color: #ffff;
+        font-family: 'Noto Sans', sans-serif;
+        width: 70%;
+        height: 10%;
+    }
+}
