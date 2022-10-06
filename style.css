@@ -19,7 +19,7 @@ header {
     height: 42px;
     background-color: #070000;
     border-bottom: 3px solid #690012;
-    margin-bottom:10px;
+    margin-bottom: 10px;
 
 }
 
@@ -80,7 +80,7 @@ div#bg-omen {
 }
 
 .containerproje .slide-container .slide .contentproje {
-    flex:1 1 350px;
+    flex: 1 1 350px;
     animation: slideContent .4s linear .4s backwards;
 }
 
@@ -184,21 +184,21 @@ p#pag2 {
     right: 20px;
 }
 
-@media(max-width: 500px) {
-    header {
-        display: block;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 30px;
-        background-color: #070000;
-        border-bottom: 3px solid #690012;
+@media(max-width: 400px) {
+    .containerproje .slide-container .slide {
+        max-height: 100vh;
+        max-width: 100vw;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 20px 9%;
+        padding-bottom: 70px;
+        margin-top: 50px;
         z-index: 1;
-
+    
     }
 
-    body#valorant-pag {
+    div.bg-fundo {
         background-image: url(imgs/background-omen.png);
         background-size: cover;
         background-repeat: no-repeat;
@@ -206,10 +206,16 @@ p#pag2 {
         background-blend-mode: color;
         background-position: right bottom;
         background-attachment: fixed;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
 
     }
 
-    body#omen-pag {
+    div#bg-omen {
         background-image: url(imgs/background-omen2.png);
         background-size: cover;
         background-repeat: no-repeat;
@@ -217,8 +223,22 @@ p#pag2 {
         background-blend-mode: color;
         background-position: center bottom;
         background-attachment: fixed;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+
     }
 
+    #omen {
+        background-position: left center;
+        margin-top: 2px;
+        margin-left: 10px;
+        width: 30%;
+        height: 20%;
+    }
     .containerproje #prev {
         top: 80%;
         left: 0;
@@ -230,10 +250,20 @@ p#pag2 {
     }
 
     .containerproje .slide-container .slide .contentproje p {
-        font-size: 16px;
+        font-size: 14px;
         color: #ffff;
         font-family: 'Noto Sans', sans-serif;
         width: 70%;
         height: 10%;
+    }
+
+    p#pag2 {
+        font-size: 14px;
+        color: #ffff;
+        font-family: 'Noto sans', sans-serif;
+        width: 80%;
+        height: 40%;
+        margin-left: 10px;
+        text-align: left;
     }
 }
